@@ -6,9 +6,10 @@ This Shelter plugin integrates with Google's Gemini 2.5 Flash model to generate 
 
 1.  Go to Shelter's settings.
 2.  In the "Plugins" section, paste the following URL into the "Install from URL" box:
-```
-https://tayshie.github.io/shelter-gemini-plugin/
-```
+    ```
+    https://Tayshie.github.io/shelter-gemini-plugin/
+    ```
+    
 3.  Click "Install". The plugin will be added to your plugins list.
 4.  Enable the "Gemini Message Generator" plugin.
 
@@ -31,7 +32,7 @@ Use the `/gemini` command in any chat channel:
 
 ## Building from Source
 
-If you want to modify the plugin, you'll need to build it from the source code.
+If you want to modify the plugin, you'll need to build it from the source code. This project uses [Lune](https://shelter.uwu.network/guides/lune) as its build tool.
 
 1.  **Clone the Repository:**
     ```bash
@@ -49,7 +50,7 @@ If you want to modify the plugin, you'll need to build it from the source code.
     ```bash
     pnpm build
     ```
-    The compiled plugin will be located at `dist/plugin.js`. You can then install this local version in Shelter for testing.
+    This command will generate the `plugin.json` manifest in the root directory and the compiled code in `dist/`.
 
 ## License
 
