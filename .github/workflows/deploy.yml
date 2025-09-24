@@ -32,7 +32,13 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Install lune globally
-        run: pnpm add -g lune
+        run: pnpm install -g lune
+
+      - name: Add global pnpm bin to PATH
+        run: echo "$(pnpm bin -g)" >> $GITHUB_PATH
+
+      - name: Check lune version
+        run: lune --version
 
       - name: Build
         run: lune build
