@@ -7,7 +7,7 @@ This Shelter plugin integrates with Google's Gemini 2.5 Flash model to generate 
 1.  Go to Shelter's settings.
 2.  In the "Plugins" section, paste the following URL into the "Install from URL" box:
     ```
-    https://Tayshie.github.io/shelter-gemini-plugin/
+    https://tayshie.github.io/shelter-gemini-plugin/
     ```
     
 3.  Click "Install". The plugin will be added to your plugins list.
