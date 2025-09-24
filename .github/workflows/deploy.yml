@@ -31,6 +31,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
+      - name: Install lune
+        run: pnpm add -g lune
+
       - name: Build plugin
         run: pnpm build
 
