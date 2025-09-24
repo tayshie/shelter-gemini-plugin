@@ -1,14 +1,13 @@
 # Shelter Gemini Message Generator Plugin
 
-This Shelter plugin integrates with Google's Gemini 1.5 Flash model to generate chat messages based on conversation history and a user-provided prompt.
+This Shelter plugin integrates with Google's Gemini 2.5 Flash model to generate chat messages based on conversation history and a user-provided prompt.
 
 ## Installation
 
 1.  Go to Shelter's settings.
 2.  In the "Plugins" section, paste the following URL into the "Install from URL" box:
-    ```    https://<YOUR_USERNAME>.github.io/shelter-gemini-plugin/
-    ```
-    *(Replace `<YOUR_USERNAME>` with your actual GitHub username.)*
+    ```    https://tayshie.github.io/shelter-gemini-plugin/
+  
 3.  Click "Install". The plugin will be added to your plugins list.
 4.  Enable the "Gemini Message Generator" plugin.
 
