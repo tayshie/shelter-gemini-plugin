@@ -1,0 +1,8 @@
+import { definePlugin } from "lune";
+
+export default definePlugin({
+  name: "Gemini Message Generator",
+  author: "EDEN 11",
+  description: "Uses Gemini 2.5 Flash to generate messages based on history and a prompt in Shelter.",
+  version: "1.0.0",
+});
