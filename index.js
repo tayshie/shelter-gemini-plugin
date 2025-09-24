@@ -70,8 +70,10 @@ const command = {
       required: true,
     },
   ],
-  execute: async (interaction, B) => {
-    const prompt = interaction.data.options[0].value;
+  // CHANGED: Function signature updated to use 'options'
+  execute: async (interaction, options) => {
+    // CHANGED: Using the recommended helper to get the option value
+    const prompt = options.getString("prompt");
     const channelId = shelter.flux.stores.ChannelStore.getCurrentlySelectedChannelId();
     const messages = shelter.flux.stores.MessageStore.getMessages(channelId);
 
@@ -87,25 +89,4 @@ const command = {
   },
 };
 
-export const onLoad = () => {
-  shelter.plugins.registerCommand(command);
-};
-
-export const onUnload = () => {
-  shelter.plugins.unregisterCommand(command.name);
-};
-
-// Programmatic settings UI, no JSX
-export const settingsUI = () => {
-    const root = document.createElement("div");
-
-    const textbox = shelter.ui.createTextbox({
-        placeholder: "Enter your Gemini API Key",
-        value: settings.apiKey,
-        onChange: (v) => (settings.apiKey = v),
-    });
-
-    root.appendChild(textbox);
-
-    return root;
-};
+export const onLoad = 
