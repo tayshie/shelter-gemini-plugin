@@ -31,18 +31,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Install lune
-        run: pnpm add -g lune
-      
-      - name: Install dependencies
-        run: npm install
-
       - name: Install lune globally
-        run: npm install -g lune
+        run: pnpm add -g lune
 
       - name: Build
         run: lune build
-       
+
       - name: Build plugin
         run: pnpm build
 
