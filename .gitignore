@@ -7,17 +7,14 @@ yarn-error.log
 
 # Environment variables
 .env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
-
-# IDEs and other tools
-.idea/
-.vscode/
-*.swp
-*.bak
+.env.*.local
 
 # Build artifacts
 dist/
 build/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.bak
