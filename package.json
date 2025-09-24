@@ -1,8 +1,16 @@
-import { definePlugin } from "lune";
-
-export default definePlugin({
-  name: "Gemini Message Generator",
-  author: "Tayshie",
-  description: "Uses Gemini 2.5 Flash to generate messages based on history and a prompt in Shelter.",
-  version: "1.0.0",
-});
+{
+  "name": "shelter-gemini-plugin",
+  "version": "1.0.0",
+  "description": "A Shelter plugin that uses Gemini to generate messages.",
+  "private": true,
+  "scripts": {
+    "build": "lune build",
+    "dev": "lune dev"
+  },
+  "devDependencies": {
+    "lune": "latest",
+    "shelter-defs": "latest"
+  },
+  "author": "EDEN 11",
+  "license": "MIT"
+}
