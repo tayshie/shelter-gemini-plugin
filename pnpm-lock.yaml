@@ -27,4 +27,119 @@ packages:
     dev: true
 
   /binary-extensions@2.2.0:
-    resolution: {integrity: sha512-jDctJ/IVQbA4aI2e5f8df59SI75ObE8z74qVmT7kr3bG7AhePN8G3/Ges
+    resolution: {integrity: sha512-jDctJ/IVQbA4aI2e5f8df59SI75ObE8z74qVmT7kr3bG7AhePN8G3/Ges2UNkxewEqp4stAn2pSAUPsNHP92sw==}
+    engines: {node: '>=8'}
+    dev: true
+
+  /braces@3.0.2:
+    resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw4eZCGecjpR2+t TIRloGfMONG2pbLtQe39m98IQ4g==}
+    engines: {node: '>=8'}
+    dependencies:
+      fill-range: 7.0.1
+    dev: true
+
+  /chokidar@3.5.3:
+    resolution: {integrity: sha512-Dr3sfKjjsqtN3FUo2cAkoqfnv3imA5iB3a2608oh37g0nVfpxxa0oR5iOJYm9vJStvj9At+g0+Bv4Q1J3xJg4w==}
+    dependencies:
+      anymatch: 3.1.3
+      braces: 3.0.2
+      glob-parent: 5.1.2
+      is-binary-path: 2.1.0
+      is-glob: 4.0.3
+      normalize-path: 3.0.0
+      readdirp: 3.6.0
+    optionalDependencies:
+      fsevents: 2.3.3
+    dev: true
+
+  /esbuild@0.19.8:
+    resolution: {integrity: sha512-oOF3aL9wsx/HBBmrpyD4g1n1f1tKxWk2Jq22S/tD2h3aZtylADvJcM8GNjYQG02yv23Yl2x+LpD5n2D7oN5IKQ==}
+    hasBin: true
+    dev: true
+
+  /fill-range@7.0.1:
+    resolution: {integrity: sha512-qOo9F+dMtkC+i48sTQyrfNMAwsGdFoE99zro+CCiJCL2jOehKCxdwpfLVgz/a5hZ59sL1wFvptqdFGZ5BFK37w==}
+    engines: {node: '>=8'}
+    dependencies:
+      to-regex-range: 5.0.1
+    dev: true
+
+  /fsevents@2.3.3:
+    resolution: {integrity: sha512-5rrqI5I12qshLePq4C2dqWU/Hj9Vbey8qNr2e4SblTUkdwQoG2tfsUo0sTytw3ho2m3c1oHTu0IeJc7Hn3sL8Q==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    optional: true
+    dev: true
+
+  /glob-parent@5.1.2:
+    resolution: {integrity: sha512-AOIgSQCepiUPwL9DLNOjSlrwsRolWaOfAI2cmMCe9LCeXEs5qNNd/vo6HlaEaSPMJ3RUuE3mtBIextBCe7caYw==}
+    engines: {node: '>= 6'}
+    dependencies:
+      is-glob: 4.0.3
+    dev: true
+
+  /is-binary-path@2.1.0:
+    resolution: {integrity: sha512-Zz/KOHN+iD6dZbqlvkY1nI7aEA22K2g9oGZ7J1cm2k2lP148Gbo/oR3uHdCAR2dYvfgUT/v177U1bClpfrTwQA==}
+    engines: {node: '>=8'}
+    dependencies:
+      binary-extensions: 2.2.0
+    dev: true
+
+  /is-extglob@2.1.1:
+    resolution: {integrity: sha512-SbKbANkN603ViZTkEoGKp/2fwn53p5t0rI7lIi2hGjOaM4dG62sJ/GR3L3w/R3/82N4b83s3sI4sL/22oYvGg==}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /is-glob@4.0.3:
+    resolution: {integrity: sha512-MULTIPLU/qry2eNmmso4GFp/0KBPDem3IYoUR+vEHYhlyH/fO+pT3t22kIckQf3dF30k5+dD3d3wtd24bA5Z+wA==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      is-extglob: 2.1.1
+    dev: true
+
+  /is-number@7.0.0:
+    resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+A2seVll4s4i1iWIadkdT7MnA9XHB7vsHrOEVUAcli8qA==}
+    engines: {node: '>=0.12.0'}
+    dev: true
+
+  /lune@0.2.1:
+    resolution: {integrity: sha512-Y45c3Pq5N5ZcKDH2w7y/3sTzXkE3gVtt+2/jH7Jg3rG3Lg3lF4F9Y9G6B9o9q9Z8A9I9o8g7H7Z8A==}
+    hasBin: true
+    dependencies:
+      '@types/node': 20.10.4
+      chokidar: 3.5.3
+      esbuild: 0.19.8
+      picocolors: 1.0.0
+    dev: true
+
+  /normalize-path@3.0.0:
+    resolution: {integrity: sha512-6eZs5Ls3WtHoEjT9+u+FUBvQ0soO3G12T2AgCl4H6kH8GkrTu5CIoOhwFle2ziNLbNfa6zCfkKPS0VVIw3UPRA==}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /picocolors@1.0.0:
+    resolution: {integrity: sha512-12CgtjmXXQXUWNveNx1st7fLzI7DpD4jijr2hD2yoM7n4yPOlDMErLliX82M0IKK3zD3GfnTUWjDtxEKguIfmA==}
+    dev: true
+
+  /picomatch@2.3.1:
+    resolution: {integrity: sha512-JU3teI6E3Yi5wT60A3K0cBPaHm5gaoBo2KAHb0E3EaN3TCabtXn3E8Wng4OQqyRiiG8T6z3hT80K1I42lgRpA==}
+    engines: {node: '>=8.6'}
+    dev: true
+
+  /readdirp@3.6.0:
+    resolution: {integrity: sha512-hOS089on8Rduqdbw5L+pYnbk/wMiJwiqGxkUlli3Uua6kwC6G2F6pcCVoEd+402L3GScnMXIqT1VGq5h5eL3gQ==}
+    engines: {node: '>=8.10.0'}
+    dependencies:
+      picomatch: 2.3.1
+    dev: true
+
+  /shelter-defs@0.1.0:
+    resolution: {integrity: sha512-m3H5jP0nI0G3D7J3o4J2q6o3K6e6E3i6l6o8n2e2h8e4q2k5k6l3m3i3j3l3k3j3l3k3j3l3k3j3l==}
+    dev: true
+
+  /to-regex-range@5.0.1:
+    resolution: {integrity: sha512-652mALNT/Oqgfgtg+mRxHwL8CAbE7q5ML4+L89bC7o5fvlUuPffoN2h4c7t62S21r6pI4Y/Ai8E210x291A5w==}
+    engines: {node: '>=8.0'}
+    dependencies:
+      is-number: 7.0.0
+    dev: true
