@@ -4,7 +4,8 @@ const settings = shelter.settings.createStore({
   apiKey: "",
 });
 
-const geminiEndpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent";
+// CHANGED: Model updated from 1.5 to 2.5
+const geminiEndpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-latest:generateContent";
 
 const generateMessage = async (prompt, history) => {
   const ankey = settings.apiKey;
@@ -73,13 +74,13 @@ const command = {
     const history = messages.toArray().slice(-10);
     generateMessage(prompt, history);
     return {
-      content: "Generating message with Gemini 1.5 Flash...",
+      // CHANGED: Response message updated from 1.5 to 2.5
+      content: "Generating message with Gemini 2.5 Flash...",
       flags: 64, // Ephemeral
     };
   },
 };
 
-// Reverted to JSX-based settings UI for better readability
 const SettingsPage = () => (
   <div>
     <shelter.ui.Textbox
