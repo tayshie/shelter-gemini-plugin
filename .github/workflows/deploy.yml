@@ -14,35 +14,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
         with:
           version: 8
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "pnpm"
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build # This now runs 'lune build'
 
-      - name: Build plugin
-        run: pnpm build
-
-      - name: Prepare deployment artifacts
-        run: |
-          mkdir deploy
-          cp plugin.json deploy/
-          cp -r dist deploy/
-
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: deploy # Deploy the 'deploy' directory
+          folder: .
           branch: gh-pages
           clean: true
+          # Keep the dist folder and the lune-generated plugin.json
+          clean-exclude: |
+            dist
+            plugin.json
