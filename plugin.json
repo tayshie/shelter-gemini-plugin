@@ -1,7 +1,7 @@
 {
   "name": "Gemini Message Generator",
-  "author": "EDEN 11",
+  "author": "Tayshie",
   "version": "1.0.0",
-  "description": "Uses Gemini 1.5 Flash to generate messages based on history and a prompt in Shelter.",
-  "entry": "index.js"
+  "description": "Uses Gemini 2.5 Flash to generate messages based on history and a prompt in Shelter.",
+  "entry": "dist/plugin.js"
 }
