@@ -1,0 +1,17 @@
+{
+  "name": "shelter-gemini-plugin",
+  "version": "1.0.0",
+  "description": "A Shelter plugin that uses Gemini to generate messages.",
+  "private": true,
+  "scripts": {
+    "build": "pnpm build:plugin",
+    "build:plugin": "esbuild src/index.jsx --bundle --outfile=dist/plugin.js --format=esm --jsx-factory=shelter.ui.h --jsx-fragment=shelter.ui.Fragment",
+    "dev": "pnpm build:plugin --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.2",
+    "shelter-defs": "latest"
+  },
+  "author": "tayshie",
+  "license": "MIT"
+}
