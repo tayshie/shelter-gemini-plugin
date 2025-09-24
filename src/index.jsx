@@ -7,7 +7,7 @@ const settings = shelter.settings.createStore({
 // CHANGED: Model updated from 1.5 to 2.5
 const geminiEndpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-latest:generateContent";
 
-const generateMessage = async (prompt, history) => {
+export const generateMessage = async (prompt, history) => {
   const ankey = settings.apiKey;
   if (!ankey) {
     shelter.ui.showToast({
@@ -40,7 +40,19 @@ const generateMessage = async (prompt, history) => {
     if (!data.candidates || data.candidates.length === 0) {
       throw new Error("No candidates returned from API.");
     }
-    const generatedText = data.candidates[0].content.parts[0].text;
+
+    const candidate = data.candidates[0];
+    if (!candidate.content) {
+      throw new Error("Invalid API response: content is missing.");
+    }
+    if (!candidate.content.parts) {
+      throw new Error("Invalid API response: parts are missing.");
+    }
+    if (candidate.content.parts.length === 0) {
+      throw new Error("Invalid API response: parts are empty.");
+    }
+
+    const generatedText = candidate.content.parts[0].text;
 
     shelter.flux.dispatcher.dispatch({
       type: "SEND_MESSAGE",
@@ -51,7 +63,7 @@ const generateMessage = async (prompt, history) => {
     console.error("Gemini API error:", error);
     shelter.ui.showToast({
       title: "Gemini Plugin Error",
-      content: "Failed to generate message. See console for details.",
+      content: error.message,
     });
   }
 };
